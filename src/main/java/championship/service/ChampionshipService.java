@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 public class ChampionshipService {
 
     public boolean checkSequence(String sequence) {
-        if (isNumbers(sequence))
+        if (isNumbers(sequence)&& checkSequenceLength(sequence))
             return true;
         else
             return false;
@@ -20,6 +20,14 @@ public class ChampionshipService {
         return result;
     }
 
+public boolean checkSequenceLength(String string) {
+        if (string.length() <= 50 && string.length() > 0)
+
+            return true;
+        else
+            return false;
+
+    }
     
 
 }
